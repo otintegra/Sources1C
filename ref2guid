@@ -1,0 +1,15 @@
+ref = "b59500055d80a2b911de397d51012ccc";
+//                    ^        ^
+left_half = left (ref, 16);
+righ_half = right(ref, 16);
+
+res =	right(ref, 8) + "-" + left(right(ref, 12), 4) + "-" + 
+		left(righ_half, 4) + "-" + 
+		left(ref, 4) + "-" + right(left_half, 12);
+
+//    51012ccc-397d-11de-b595-00055d80a2b9
+сообщить(
+	Справочники.ГруппыФинансовогоУчетаРасчетов.ПолучитьСсылку(
+		Новый УникальныйИдентификатор(res)
+	)
+);
